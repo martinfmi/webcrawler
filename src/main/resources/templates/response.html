@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Hello Spring MVC !</title>
+	</head> 
+	<body>
+		<table>
+			<tr th:each="link: ${links}">
+				<th th:text="${link.link}" />
+			</tr>
+		</table>
+	</body>
+</html>

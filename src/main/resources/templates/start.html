@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Hello Spring MVC !</title>
+	</head> 
+	<body>
+		<form action="#" th:action="@{/app/submit}" th:object="${siteInput}" method="post">
+		    <label for="sites">Sites</label>
+		    <input type="text" th:field="*{sites}" id="sites" placeholder="Sites">
+		</form>
+		<script type="application/javascript" th:src="@{/app/libs/jquery-3.5.1.min.js}"></script>
+		<script type="application/javascript" th:src="@{/app/main.js}"></script>
+	</body>
+</html>

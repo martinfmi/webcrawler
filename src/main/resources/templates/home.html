@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Hello Spring MVC !</title>
+	</head> 
+	<body>
+		<table th:switch="${color}">
+			<tr th:each="textItem, iter: ${text}">
+				<div th:case="'red'" style="color:red" >
+					Color is red
+				</div>
+				<div th:with="variable=${text}"  th:case="'green'" style="color:green" >
+					Color is green
+				</div>
+				<th th:text="${textItem}" />
+				<th th:text="${iter.index}" />
+				<th th:text="${iter.size}" />
+				<th th:text="${iter.first}" />
+				<th th:text="${iter.last}" />
+				<span th:unless="${iter.last}">Not last element !</span>
+				<span th:if="${iter.last}">Finished rendering !</span>
+			</tr>
+		</table>
+	</body>
+</html>
